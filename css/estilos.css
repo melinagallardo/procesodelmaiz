@@ -1,0 +1,435 @@
+.navbar{
+    background-color: rgb(51, 130, 35);
+}
+.navbar-text,
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: rgb(66, 162, 47);
+}
+/* Container for cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside card */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Button inside card */
+.card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for button */
+.card-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .card-content p {
+        font-size: 0.9rem;
+    }
+    
+    .card-btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color:rgb(51, 130, 35);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive (el footer se adapta a cualquier tamaño de pantalla) */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+}
+/* Contenedor de la sección de preguntas */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Título de la sección */
+.faq-container h2 {
+    text-align: center;
+    color: #333; /* Color del texto */
+    margin-bottom: 20px;
+    font-size: 2rem; /* Tamaño del texto */
+}
+
+/* Estilos para cada FAQ */
+.faq {
+    margin-bottom: 15px; /* Espaciado entre preguntas */
+}
+
+/* Label para las preguntas */
+.faq-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4CAF50; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.faq-label:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.03); /* Efecto de escala al pasar el ratón */
+}
+
+/* Íconos de las flechas */
+.arrow {
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transition: transform 0.3s ease;
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+/* Contenido de la respuesta */
+.faq-content {
+    max-height: 0;
+    padding: 0 15px;
+    background-color: #e8f5e9; /* Color de fondo suave para el contenido */
+    border-left: 5px solid #4CAF50; /* Borde izquierdo verde */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    font-size: 1rem;
+    color: #333; /* Color del texto */
+}
+
+/* Cuando la pregunta está marcada, se expande el contenido */
+input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 200px; /* Ajustable según el contenido */
+    padding: 15px;
+}
+
+.faq-content p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los checkboxes (ocultos) */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Efecto de rotación de flechas */
+input[type="checkbox"]:checked + .faq-label .arrow {
+    transform: rotate(-135deg);
+}
+/* Sección de texto e imagen */
+.text-image-section {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Contenedor de texto */
+.text-container {
+    flex: 1; /* Toma el 50% del espacio disponible */
+    padding-right: 20px; /* Espaciado a la derecha */
+}
+
+/* Título */
+.text-container h2 {
+    font-size: 2rem;
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Párrafos */
+.text-container p {
+    font-size: 1rem;
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilos del botón */
+.button {
+    display: inline-block; /* Para que el botón respete el tamaño */
+    margin-top: 20px; /* Espacio superior */
+    padding: 12px 20px; /* Espaciado interno */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto */
+    font-size: 1rem; /* Tamaño del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Contenedor de imagen */
+.image-container {
+    flex: 1; /* Toma el 50% del espacio disponible */
+    text-align: center; /* Centra la imagen */
+}
+
+/* Imagen */
+.image-container img {
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+/* Sección de texto e imágenes */
+.text-image-section {
+    max-width: 800px;
+    margin: 0 auto; /* Centra la sección */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    
+}
+
+/* Contenedor de texto */
+.text-container {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Títulos */
+.text-container h2 {
+    font-size: 2rem;
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Párrafos */
+.text-container p {
+    font-size: 1rem;
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Contenedor de imagen */
+.image-container {
+    margin: 15px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto debajo de la imagen */
+}
+
+/* Imagen */
+.image-container img {
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+/* Texto debajo de la imagen */
+.image-container p {
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #777; /* Color del texto */
+    margin-top: 5px; /* Margen superior */
+}
+/* Estilo del banner */
+.banner {
+    position: relative; /* Posición relativa para el contenido */
+    height: 250px; /* Altura del banner */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+/* Estilo de la imagen */
+.banner-image {
+    width: 100%; /* Imagen ocupa todo el ancho del banner */
+    height: 100%; /* Imagen ocupa toda la altura del banner */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo del contenido del banner */
+.banner-content {
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Centro vertical */
+    left: 50%; /* Centro horizontal */
+    transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+}
+
+/* Título del banner */
+.banner-content h1 {
+    font-size: 2.5rem; /* Tamaño del texto */
+    margin: 0; /* Sin márgenes */
+}
+
+li{
+    color: rgb(87, 86, 86);
+}
+/* gallary */
+.galeria{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+   
+}
+
+
+
+.contenedor-imagenes{
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(15, 146, 13, 0.781) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+/* gallary */
